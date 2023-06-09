@@ -1,0 +1,31 @@
+import random
+
+# Define a list of predefined responses
+responses = [
+    "Hello!",
+    "How can I help you?",
+    "I'm sorry, I don't understand.",
+    "Please provide more information.",
+    "Thank you!",
+    "Goodbye!"
+]
+
+# Function to generate a random response from the list
+def get_random_response():
+    return random.choice(responses)
+
+# Main chat loop
+while True:
+    # Get user input
+    user_input = input("User: ")
+
+    # Check for exit keyword
+    if user_input.lower() == "exit":
+        print("Chatbot: Goodbye!")
+        break
+
+    # Generate a response
+    response = get_random_response()
+
+    # Print the response
+    print("Chatbot:", response)
